@@ -1,0 +1,9 @@
+function digitalRoot(n) {
+  if (n < 10) {
+    return n
+  }
+  else {
+    n = parseInt(n.toString()[0]) + digitalRoot(parseInt(n.toString().slice(1)))
+    return digitalRoot(n)
+  }
+}
